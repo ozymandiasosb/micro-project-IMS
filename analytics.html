@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | IMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+
+<header class="app-topbar">
+    <a class="topbar-back" href="dashboard.html">←</a>
+    <span class="topbar-title">Analytics</span>
+    <span class="status-pill">IMS</span>
+</header>
+
+<main class="content-main">
+
+    <section class="page-heading">
+        <p class="eyebrow">INVENTORY ANALYTICS</p>
+        <h1>Category demand &amp; turnover</h1>
+        <p class="subtitle">
+            View completed sales by category and the value of stock currently on hand.
+        </p>
+    </section>
+
+    <section class="stats-grid">
+
+        <article class="stat-card">
+            <p>Stock value</p>
+            <strong id="stockValue">₹0</strong>
+        </article>
+
+        <article class="stat-card">
+            <p>Sales total</p>
+            <strong id="salesValue">₹0</strong>
+        </article>
+
+    </section>
+
+    <section class="content-card">
+
+        <h2>Units sold by category</h2>
+
+        <div id="categoryChart" class="bar-list"></div>
+
+        <p id="analyticsEmpty" class="empty-state">
+            Add products to see category data.
+        </p>
+
+    </section>
+
+    <section class="content-card">
+
+        <h2>Sales activity</h2>
+
+        <p id="salesCount" class="helper-text">
+            No completed sales yet.
+        </p>
+
+    </section>
+
+</main>
+
+<nav class="bottom-nav">
+    <a class="nav-item" href="dashboard.html"><span>▦</span>Dashboard</a>
+    <a class="nav-item" href="search-inventory.html"><span>⌕</span>Search</a>
+    <a class="nav-item" href="index.html"><span>⚙</span>Account</a>
+    <a class="nav-item" href="manage-inventory.html"><span>◯</span>Inventory</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

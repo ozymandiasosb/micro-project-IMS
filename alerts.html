@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts | IMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+
+<header class="app-topbar">
+    <a class="topbar-back" href="dashboard.html">←</a>
+    <span class="topbar-title">Alerts</span>
+    <span class="status-pill">IMS</span>
+</header>
+
+<main class="content-main">
+
+    <section class="page-heading">
+        <p class="eyebrow">PROACTIVE NOTIFICATIONS</p>
+        <h1>Warehouse alerts</h1>
+        <p class="subtitle">
+            Review low-stock products and approaching expiry dates.
+        </p>
+    </section>
+
+    <section class="stats-grid">
+
+        <article class="stat-card">
+            <p>Low stock</p>
+            <strong id="alertLowCount">0</strong>
+        </article>
+
+        <article class="stat-card">
+            <p>Expiring soon</p>
+            <strong id="alertExpiryCount">0</strong>
+        </article>
+
+    </section>
+
+    <section class="content-card">
+        <h2>Low-stock threshold</h2>
+
+        <p class="helper-text">
+            Products with 5 or fewer units are flagged for reorder.
+        </p>
+
+        <div id="lowStockList" class="simple-list"></div>
+    </section>
+
+    <section class="content-card">
+
+        <h2>Expiry monitor</h2>
+
+        <p class="helper-text">
+            Expired items are flagged for removal.
+            Critical: 0–2 days.
+            Warning: 3–7 days.
+            Watchlist: 8–14 days.
+        </p>
+
+        <div class="table-wrap">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Batch ID</th>
+                        <th>Units left</th>
+                        <th>Days remaining</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="expiryBody"></tbody>
+
+            </table>
+
+        </div>
+
+        <p id="expiryEmpty" class="empty-state">
+            No products with an expiry date have been added.
+        </p>
+
+    </section>
+
+</main>
+
+<nav class="bottom-nav">
+    <a class="nav-item" href="dashboard.html"><span>▦</span>Dashboard</a>
+    <a class="nav-item" href="search-inventory.html"><span>⌕</span>Search</a>
+    <a class="nav-item" href="index.html"><span>⚙</span>Account</a>
+    <a class="nav-item" href="manage-inventory.html"><span>◯</span>Inventory</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

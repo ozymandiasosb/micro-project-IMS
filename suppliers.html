@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers | IMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+
+<header class="app-topbar">
+    <a class="topbar-back" href="dashboard.html">←</a>
+    <span class="topbar-title">Suppliers</span>
+    <span class="status-pill">IMS</span>
+</header>
+
+<main class="content-main">
+
+    <section class="page-heading">
+        <p class="eyebrow">SUPPLIER DIRECTORY</p>
+        <h1>Manage suppliers</h1>
+        <p class="subtitle">Save supplier contact details for your stock records.</p>
+    </section>
+
+    <section class="content-card">
+        <h2>Add a supplier</h2>
+
+        <form id="supplierForm" class="product-form">
+
+            <label for="supplierName">Supplier name</label>
+            <input id="supplierName"
+                   required
+                   placeholder="e.g. Sunrise Distributors">
+
+            <label for="supplierPhone">Phone number</label>
+            <input id="supplierPhone"
+                   type="tel"
+                   placeholder="Contact number">
+
+            <label for="supplierEmail">Email (optional)</label>
+            <input id="supplierEmail"
+                   type="email"
+                   placeholder="supplier@example.com">
+
+            <button class="primary-button" type="submit">
+                Save supplier
+            </button>
+
+            <p id="supplierMessage" class="form-message" role="status"></p>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <div class="section-heading">
+            <h2>Supplier list</h2>
+            <span id="supplierCount">0 suppliers</span>
+        </div>
+
+        <div id="supplierList" class="simple-list"></div>
+    </section>
+
+</main>
+
+<nav class="bottom-nav">
+    <a class="nav-item" href="dashboard.html"><span>▦</span>Dashboard</a>
+    <a class="nav-item" href="search-inventory.html"><span>⌕</span>Search</a>
+    <a class="nav-item" href="index.html"><span>⚙</span>Account</a>
+    <a class="nav-item" href="manage-inventory.html"><span>◯</span>Inventory</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
