@@ -1,0 +1,783 @@
+/* =====================================
+   1. SHARED SETTINGS
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --page: #ffffff;
+    --card: #f2f1f5;
+    --border: #dedde2;
+    --text: #171719;
+    --muted: #707078;
+    --accent: #5c6170;
+    --accent-dark: #454a57;
+    --success: #26734d;
+    --warning-bg: #fff1d8;
+    --warning-text: #8a5b12;
+}
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =====================================
+   2. SIGN-UP PAGE
+===================================== */
+
+.signup-page {
+    min-height: 100vh;
+}
+
+.signup-wrap {
+    width: min(100% - 36px, 560px);
+    margin: 0 auto;
+    padding: 28px 0 48px;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--muted);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.signup-content {
+    margin-top: 74px;
+    text-align: center;
+}
+
+.brand-mark {
+    display: grid;
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 28px;
+    place-items: center;
+    border: 14px solid #d9d9dd;
+    border-top-color: #888990;
+    border-radius: 50%;
+    color: #777982;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.signup-content h1 {
+    margin: 0;
+    font-size: clamp(30px, 7vw, 42px);
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.signup-form {
+    display: grid;
+    gap: 20px;
+    margin-top: 82px;
+    text-align: left;
+}
+
+.input-row {
+    display: flex;
+    min-height: 62px;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9ad;
+    padding: 0 14px;
+}
+
+.input-icon {
+    color: #242428;
+    font-size: 22px;
+}
+
+.input-row input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.valid-mark {
+    font-size: 22px;
+}
+
+.show-password {
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.terms-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 16px;
+}
+
+.terms-row input {
+    width: 19px;
+    height: 19px;
+    accent-color: var(--accent);
+}
+
+.terms-row a {
+    text-decoration: underline;
+}
+
+/* =====================================
+   3. BUTTONS
+===================================== */
+
+.primary-button,
+.secondary-button {
+    min-height: 48px;
+    border: 0;
+    border-radius: 3px;
+    padding: 12px 18px;
+}
+
+.primary-button {
+    background: var(--accent);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--accent-dark);
+}
+
+.secondary-button {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text);
+}
+
+.signup-button {
+    min-height: 62px;
+    font-size: 18px;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =====================================
+   4. APP HEADER
+===================================== */
+
+.app-page {
+    min-height: 100vh;
+    padding-bottom: 92px;
+}
+
+.app-topbar {
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px max(22px, calc((100% - 760px) / 2));
+}
+
+.topbar-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.topbar-back {
+    color: var(--muted);
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.status-pill {
+    border-radius: 20px;
+    background: #e8f7ec;
+    color: #269a52;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* =====================================
+   5. PAGE LAYOUT
+===================================== */
+
+.dashboard-main,
+.content-main {
+    width: min(100% - 36px, 760px);
+    margin: 34px auto 40px;
+}
+
+.page-heading {
+    margin-bottom: 34px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: clamp(34px, 7vw, 48px);
+}
+
+.page-heading .subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* =====================================
+   6. DASHBOARD CARDS
+===================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-card {
+    min-height: 122px;
+    padding: 22px 20px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--card);
+}
+
+.stat-card p {
+    margin: 0 0 12px;
+    color: #85858c;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.stat-card strong {
+    font-size: 32px;
+}
+
+.stat-card small {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.stat-wide {
+    grid-column: 1 / -1;
+}
+
+/* =====================================
+   7. DASHBOARD ACTIONS
+===================================== */
+
+.quick-section {
+    margin-top: 42px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2,
+.content-card h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.section-heading > span {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.action-card {
+    display: flex;
+    min-height: 164px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    border: 1px solid var(--border);
+    border-radius: 23px;
+    background: var(--card);
+    padding: 18px;
+    text-decoration: none;
+}
+
+.action-card strong {
+    margin-top: 2px;
+    font-size: 20px;
+}
+
+.action-card > span:last-child {
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+.action-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    font-size: 25px;
+}
+
+.action-card:hover {
+    border-color: #b9b8c0;
+    background: #eae9ee;
+}
+
+.muted-card {
+    color: #777780;
+}
+
+/* =====================================
+   8. CONTENT CARDS
+===================================== */
+
+.content-card {
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--card);
+    padding: 22px;
+}
+
+/* =====================================
+   9. FORMS
+===================================== */
+
+.product-form {
+    display: grid;
+    gap: 11px;
+    margin-top: 20px;
+}
+
+.product-form label,
+.search-form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.product-form input,
+.search-form input {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #cac9d0;
+    border-radius: 8px;
+    background: white;
+    padding: 10px 12px;
+}
+
+.product-form input:focus,
+.search-form input:focus {
+    border-color: var(--accent);
+    outline: 2px solid #5c617022;
+}
+
+.form-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-two-col > div {
+    display: grid;
+    gap: 11px;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.form-message {
+    min-height: 18px;
+    margin: 0;
+    color: var(--success);
+    font-size: 13px;
+}
+
+.form-message.error {
+    color: #a12c2c;
+}
+
+.search-form {
+    display: grid;
+    gap: 12px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+.search-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-row button {
+    min-width: 100px;
+}
+
+/* =====================================
+   10. INVENTORY TABLE
+===================================== */
+
+.empty-state {
+    margin: 18px 0 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 14px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    border-bottom: 1px solid #e5e4e8;
+    padding: 12px 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table th {
+    color: #64646c;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =====================================
+   11. STOCK STATUS
+===================================== */
+
+.stock-tag {
+    display: inline-block;
+    border-radius: 20px;
+    background: #e5f3eb;
+    color: var(--success);
+    padding: 5px 9px;
+    font-size: 12px;
+}
+
+.stock-tag.low {
+    background: var(--warning-bg);
+    color: var(--warning-text);
+}
+
+.stock-tag.critical {
+    background: #ffe3e3;
+    color: #a12c2c;
+}
+
+/* =====================================
+   12. TABLE ACTION BUTTONS
+===================================== */
+
+.table-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.small-button {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: white;
+    padding: 6px 9px;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.small-button.delete {
+    color: #a12c2c;
+}
+
+/* =====================================
+   13. BOTTOM NAVIGATION
+===================================== */
+
+.bottom-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    min-height: 76px;
+
+    border-top: 1px solid #e6e5e9;
+    background: rgba(255, 255, 255, 0.97);
+
+    padding: 8px 8px max(8px, env(safe-area-inset-bottom));
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    color: #85858c;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.nav-item span {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.nav-item.active {
+    color: var(--text);
+}
+
+/* =====================================
+   14. ADDITIONAL MODULE STYLES
+===================================== */
+
+[hidden] {
+    display: none !important;
+}
+
+.helper-text {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.simple-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.simple-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+
+    line-height: 1.45;
+}
+
+.simple-list-item span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Billing totals */
+
+.bill-totals {
+    max-width: 360px;
+    margin: 18px 0 20px auto;
+}
+
+.bill-totals p {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--muted);
+}
+
+.bill-totals strong {
+    color: var(--text);
+}
+
+.bill-totals .bill-grand {
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Analytics bars */
+
+.bar-list {
+    display: grid;
+    gap: 17px;
+    margin-top: 20px;
+}
+
+.bar-item {
+    display: grid;
+    grid-template-columns: minmax(90px, 150px) 1fr auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.bar-label {
+    font-size: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.bar-track {
+    height: 20px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #e9e9ed;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: #16ad83;
+}
+
+.bar-item > strong {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Dropdowns */
+
+select {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #cac9d0;
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px 12px;
+    font: inherit;
+}
+
+/* Keyboard accessibility */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #16ad8355;
+    outline-offset: 2px;
+}
+
+/* =====================================
+   15. RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 520px) {
+
+    .signup-content {
+        margin-top: 54px;
+    }
+
+    .signup-form {
+        margin-top: 56px;
+    }
+
+    .dashboard-main,
+    .content-main {
+        margin-top: 22px;
+    }
+
+    .action-card {
+        min-height: 150px;
+        padding: 15px;
+    }
+
+    .action-card strong {
+        font-size: 18px;
+    }
+
+    .content-card {
+        padding: 17px;
+    }
+
+    .bar-item {
+        grid-template-columns: 1fr auto;
+    }
+
+    .bar-track {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .simple-list-item {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .stats-grid,
+    .action-grid,
+    .form-two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-wide {
+        grid-column: auto;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+}
