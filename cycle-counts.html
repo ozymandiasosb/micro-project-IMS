@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle counts | IMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+
+<header class="app-topbar">
+    <a class="topbar-back" href="dashboard.html">←</a>
+    <span class="topbar-title">Cycle counts</span>
+    <span class="status-pill">IMS</span>
+</header>
+
+<main class="content-main">
+
+    <section class="page-heading">
+        <p class="eyebrow">STOCK VERIFICATION</p>
+        <h1>Physical stock count</h1>
+        <p class="subtitle">
+            Compare the quantity on screen with the quantity on the shelf.
+        </p>
+    </section>
+
+    <section class="content-card">
+
+        <h2>Record a count</h2>
+
+        <form id="countForm" class="product-form">
+
+            <label for="countProduct">Product</label>
+
+            <select id="countProduct" required>
+                <option value="">Choose a product</option>
+            </select>
+
+            <label for="countQuantity">
+                Actual quantity counted
+            </label>
+
+            <input
+                id="countQuantity"
+                type="number"
+                min="0"
+                step="1"
+                required
+            >
+
+            <button class="primary-button" type="submit">
+                Save stock count
+            </button>
+
+            <p id="countMessage" class="form-message" role="status"></p>
+
+        </form>
+
+    </section>
+
+    <section class="content-card">
+
+        <h2>Count history</h2>
+
+        <div id="countHistory" class="simple-list"></div>
+
+    </section>
+
+</main>
+
+<nav class="bottom-nav">
+    <a class="nav-item" href="dashboard.html"><span>▦</span>Dashboard</a>
+    <a class="nav-item" href="search-inventory.html"><span>⌕</span>Search</a>
+    <a class="nav-item" href="index.html"><span>⚙</span>Account</a>
+    <a class="nav-item" href="manage-inventory.html"><span>◯</span>Inventory</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
