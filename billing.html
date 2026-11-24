@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing / POS | IMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+
+<header class="app-topbar">
+    <a class="topbar-back" href="dashboard.html">←</a>
+    <span class="topbar-title">Billing / POS</span>
+    <span class="status-pill">IMS</span>
+</header>
+
+<main class="content-main">
+
+    <section class="page-heading">
+        <p class="eyebrow">AUTOMATED POS WORKFLOW</p>
+        <h1>Create a bill</h1>
+        <p class="subtitle">
+            Choose sold items, calculate GST and deduct stock after confirmation.
+        </p>
+    </section>
+
+    <section class="content-card">
+        <h2>Add items to bill</h2>
+
+        <form id="billForm" class="product-form">
+
+            <label for="billProduct">Product</label>
+            <select id="billProduct" required>
+                <option value="">Choose a product</option>
+            </select>
+
+            <label for="billQuantity">Quantity sold</label>
+            <input id="billQuantity"
+                   type="number"
+                   min="1"
+                   step="1"
+                   value="1"
+                   required>
+
+            <button class="primary-button" type="submit">
+                Add to bill
+            </button>
+
+            <p id="billMessage" class="form-message" role="status"></p>
+        </form>
+    </section>
+
+    <section class="content-card">
+
+        <div class="section-heading">
+            <h2>Current bill</h2>
+            <span id="billItemCount">0 items</span>
+        </div>
+
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="billBody"></tbody>
+            </table>
+        </div>
+
+        <div class="bill-totals">
+
+            <p>
+                Subtotal
+                <strong id="billSubtotal">₹0.00</strong>
+            </p>
+
+            <p>
+                GST (5%)
+                <strong id="billTax">₹0.00</strong>
+            </p>
+
+            <p class="bill-grand">
+                Grand total
+                <strong id="billTotal">₹0.00</strong>
+            </p>
+
+        </div>
+
+        <button id="completeBill" class="primary-button" type="button">
+            Complete sale &amp; deduct stock
+        </button>
+
+        <p id="invoiceMessage" class="form-message" role="status"></p>
+
+    </section>
+
+    <section class="content-card">
+        <h2>Recent invoices</h2>
+        <div id="invoiceList" class="simple-list"></div>
+    </section>
+
+</main>
+
+<nav class="bottom-nav">
+    <a class="nav-item" href="dashboard.html"><span>▦</span>Dashboard</a>
+    <a class="nav-item" href="search-inventory.html"><span>⌕</span>Search</a>
+    <a class="nav-item" href="index.html"><span>⚙</span>Account</a>
+    <a class="nav-item" href="manage-inventory.html"><span>◯</span>Inventory</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
